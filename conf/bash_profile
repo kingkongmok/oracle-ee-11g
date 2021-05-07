@@ -1,0 +1,22 @@
+# bash_profile for docker sath89/oracle-ee-11g environment, with rlwrap
+
+export ORACLE_BASE=/u01/app/oracle
+export ORACLE_HOME=$ORACLE_BASE/product/11.2.0/EE
+export ORACLE_SID=EE
+export TNS_ADMIN=$ORACLE_HOME/network/admin
+export ORACLE_TERM=vt100
+export NLS_LANG=AMERICAN_AMERICA.AL32UTF8
+export NLS_DATE_FORMAT="DD-MON-YYYY HH24:MI:SS"
+export ORA_NLS11=$ORACLE_HOME/nls/data
+export PATH=$ORACLE_HOME/bin:/usr/sbin:$PATH
+export EDITOR="vi"
+alias sqlplus="rlwrap sqlplus"
+alias dgmgrl="rlwrap dgmgrl"
+alias rman="rlwrap rman"
+alias lsnrctl="rlwrap lsnrctl"
+alias asmcmd="rlwrap asmcmd"
+alias adrci="rlwrap adrci"
+alias impdp="rlwrap impdp"
+alias expdp="rlwrap expdp"
+
+export PS1='\[\e[1;33m\]\u@\h\[\e[m\] \[\e[1;32m\]\w\[\e[m\] \[\e[1;32m\]\$\[\e[m\] \[\e[1;37m\]'

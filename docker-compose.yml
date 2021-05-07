@@ -1,0 +1,23 @@
+version: '2.2'
+services:
+
+    oracle:
+       image: 'kingkongmok/oracle-ee-11g:1.0'
+       container_name: oracle
+       environment:
+           - CHARACTER_SET=AL32UTF8
+           - DEFAULT_SYS_PASS=oracle
+           - processes=1000
+           - sessions=1105
+           - transactions=1215
+       ports:
+         - 1521:1521
+       volumes:
+         - ./data:/u01/app/oracle
+
+       networks:
+         - docker-bridge
+
+
+networks:
+    docker-bridge:
