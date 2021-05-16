@@ -14,10 +14,3 @@ services:
          - 1521:1521
        volumes:
          - ./data:/u01/app/oracle
-
-       networks:
-         - docker-bridge
-
-
-networks:
-    docker-bridge:

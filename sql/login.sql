@@ -6,5 +6,5 @@ set linesize 170
 set pagesize 45
 define _editor=vi
 column spool_logfile new_val spool_logfile
-select '.sqlplus_spool/' || to_char(sysdate, 'yyyymmdd' )||'.log' spool_logfile from dual;
+select '/home/oracle/.sqlplus_spool/' || to_char(sysdate, 'yyyymmdd' )||'.log' spool_logfile from dual;
 spool  &&spool_logfile append
